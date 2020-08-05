@@ -1,0 +1,24 @@
+PODS:
+  - Masonry (1.1.0)
+  - MTGeometry (0.0.5)
+  - OpenCV2 (4.3.0)
+
+DEPENDENCIES:
+  - Masonry
+  - MTGeometry
+  - OpenCV2 (~> 4.3.0)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - MTGeometry
+    - OpenCV2
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MTGeometry: 2468b2ac30e2391ae272d5545a38ead8bbebe327
+  OpenCV2: ffe82e5cb5d16dc3fc01a5f4127b9a5b3cfc7d1b
+
+PODFILE CHECKSUM: 15480b1c839fbf27d2772c10de26e9038c391bfa
+
+COCOAPODS: 1.9.1
