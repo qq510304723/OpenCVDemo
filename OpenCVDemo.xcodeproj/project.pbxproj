@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B0F61FE48D7D3E2B8D800C8A /* libPods-OpenCVDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2858C05E92D273410605CE7B /* libPods-OpenCVDemo.a */; };
-		D87489B924D9332B00C63A00 /* WDOpenCVHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D87489B824D9332B00C63A00 /* WDOpenCVHelper.mm */; };
-		D87489BF24D9442400C63A00 /* WDOpenCVUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = D87489BE24D9442400C63A00 /* WDOpenCVUtils.mm */; };
-		D87489C324D9460100C63A00 /* WDOpenCVEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87489C224D9460100C63A00 /* WDOpenCVEditingViewController.m */; };
-		D87489C724D952D700C63A00 /* WDOpenCVCropFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87489C624D952D700C63A00 /* WDOpenCVCropFrameView.m */; };
-		D87489CA24D9641500C63A00 /* UIImageView+SHMContentRect.m in Sources */ = {isa = PBXBuildFile; fileRef = D87489C924D9641500C63A00 /* UIImageView+SHMContentRect.m */; };
-		D87489D124D98B9E00C63A00 /* WDOpenCVCropCornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87489D024D98B9E00C63A00 /* WDOpenCVCropCornerView.m */; };
-		D882DACF24D809B100593B05 /* WDOCRResizingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D882DACE24D809B100593B05 /* WDOCRResizingImageView.m */; };
-		D882DAD224D80F5C00593B05 /* WDOCRResizingImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D882DAD124D80F5C00593B05 /* WDOCRResizingImageViewController.m */; };
+		D87489B924D9332B00C63A00 /* LHGOpenCVHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D87489B824D9332B00C63A00 /* LHGOpenCVHelper.mm */; };
+		D87489BF24D9442400C63A00 /* LHGOpenCVUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = D87489BE24D9442400C63A00 /* LHGOpenCVUtils.mm */; };
+		D87489C324D9460100C63A00 /* LHGOpenCVEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87489C224D9460100C63A00 /* LHGOpenCVEditingViewController.m */; };
+		D87489C724D952D700C63A00 /* LHGOpenCVCropFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87489C624D952D700C63A00 /* LHGOpenCVCropFrameView.m */; };
+		D87489CA24D9641500C63A00 /* UIImageView+LHGContentRect.m in Sources */ = {isa = PBXBuildFile; fileRef = D87489C924D9641500C63A00 /* UIImageView+LHGContentRect.m */; };
+		D87489D124D98B9E00C63A00 /* LHGOpenCVCropCornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87489D024D98B9E00C63A00 /* LHGOpenCVCropCornerView.m */; };
+		D882DACF24D809B100593B05 /* LHGOCRResizingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D882DACE24D809B100593B05 /* LHGOCRResizingImageView.m */; };
+		D882DAD224D80F5C00593B05 /* LHGOCRResizingImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D882DAD124D80F5C00593B05 /* LHGOCRResizingImageViewController.m */; };
 		D89975BA24D2AC6800EA5597 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D89975B924D2AC6800EA5597 /* AppDelegate.m */; };
 		D89975BD24D2AC6800EA5597 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D89975BC24D2AC6800EA5597 /* SceneDelegate.m */; };
 		D89975C024D2AC6800EA5597 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89975BF24D2AC6800EA5597 /* ViewController.m */; };
@@ -27,31 +27,31 @@
 		D899760924D2F94A00EA5597 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D89975FF24D2F94A00EA5597 /* 3.png */; };
 		D899760C24D2F94A00EA5597 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D899760224D2F94A00EA5597 /* 2.png */; };
 		D899760D24D2F94A00EA5597 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D899760324D2F94A00EA5597 /* 1.png */; };
-		D8D79EB024D3BE5000444B91 /* OpenCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D79EAF24D3BE5000444B91 /* OpenCVViewController.m */; };
-		D8E2965224DA6045004696A4 /* WDOpenCVCropMagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E2965124DA6045004696A4 /* WDOpenCVCropMagnifierView.m */; };
+		D8D79EB024D3BE5000444B91 /* LHGOpenCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D79EAF24D3BE5000444B91 /* LHGOpenCVViewController.m */; };
+		D8E2965224DA6045004696A4 /* LHGOpenCVCropMagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E2965124DA6045004696A4 /* LHGOpenCVCropMagnifierView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2858C05E92D273410605CE7B /* libPods-OpenCVDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenCVDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3383DC957D2D14694BDE739C /* Pods-OpenCVDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCVDemo.debug.xcconfig"; path = "Target Support Files/Pods-OpenCVDemo/Pods-OpenCVDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AEBFDF4532C1DC65FF1ED7D2 /* Pods-OpenCVDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCVDemo.release.xcconfig"; path = "Target Support Files/Pods-OpenCVDemo/Pods-OpenCVDemo.release.xcconfig"; sourceTree = "<group>"; };
-		D87489B724D9332B00C63A00 /* WDOpenCVHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOpenCVHelper.h; sourceTree = "<group>"; };
-		D87489B824D9332B00C63A00 /* WDOpenCVHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WDOpenCVHelper.mm; sourceTree = "<group>"; };
-		D87489BA24D9409000C63A00 /* WDOpenCVDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOpenCVDefines.h; sourceTree = "<group>"; };
-		D87489BD24D9442400C63A00 /* WDOpenCVUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOpenCVUtils.h; sourceTree = "<group>"; };
-		D87489BE24D9442400C63A00 /* WDOpenCVUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WDOpenCVUtils.mm; sourceTree = "<group>"; };
-		D87489C124D9460100C63A00 /* WDOpenCVEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOpenCVEditingViewController.h; sourceTree = "<group>"; };
-		D87489C224D9460100C63A00 /* WDOpenCVEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDOpenCVEditingViewController.m; sourceTree = "<group>"; };
-		D87489C524D952D700C63A00 /* WDOpenCVCropFrameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOpenCVCropFrameView.h; sourceTree = "<group>"; };
-		D87489C624D952D700C63A00 /* WDOpenCVCropFrameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDOpenCVCropFrameView.m; sourceTree = "<group>"; };
-		D87489C824D9641500C63A00 /* UIImageView+SHMContentRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SHMContentRect.h"; sourceTree = "<group>"; };
-		D87489C924D9641500C63A00 /* UIImageView+SHMContentRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SHMContentRect.m"; sourceTree = "<group>"; };
-		D87489CF24D98B9E00C63A00 /* WDOpenCVCropCornerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOpenCVCropCornerView.h; sourceTree = "<group>"; };
-		D87489D024D98B9E00C63A00 /* WDOpenCVCropCornerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDOpenCVCropCornerView.m; sourceTree = "<group>"; };
-		D882DACD24D809B100593B05 /* WDOCRResizingImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOCRResizingImageView.h; sourceTree = "<group>"; };
-		D882DACE24D809B100593B05 /* WDOCRResizingImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDOCRResizingImageView.m; sourceTree = "<group>"; };
-		D882DAD024D80F5C00593B05 /* WDOCRResizingImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOCRResizingImageViewController.h; sourceTree = "<group>"; };
-		D882DAD124D80F5C00593B05 /* WDOCRResizingImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDOCRResizingImageViewController.m; sourceTree = "<group>"; };
+		D87489B724D9332B00C63A00 /* LHGOpenCVHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOpenCVHelper.h; sourceTree = "<group>"; };
+		D87489B824D9332B00C63A00 /* LHGOpenCVHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGOpenCVHelper.mm; sourceTree = "<group>"; };
+		D87489BA24D9409000C63A00 /* LHGOpenCVDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOpenCVDefines.h; sourceTree = "<group>"; };
+		D87489BD24D9442400C63A00 /* LHGOpenCVUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOpenCVUtils.h; sourceTree = "<group>"; };
+		D87489BE24D9442400C63A00 /* LHGOpenCVUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LHGOpenCVUtils.mm; sourceTree = "<group>"; };
+		D87489C124D9460100C63A00 /* LHGOpenCVEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOpenCVEditingViewController.h; sourceTree = "<group>"; };
+		D87489C224D9460100C63A00 /* LHGOpenCVEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHGOpenCVEditingViewController.m; sourceTree = "<group>"; };
+		D87489C524D952D700C63A00 /* LHGOpenCVCropFrameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOpenCVCropFrameView.h; sourceTree = "<group>"; };
+		D87489C624D952D700C63A00 /* LHGOpenCVCropFrameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHGOpenCVCropFrameView.m; sourceTree = "<group>"; };
+		D87489C824D9641500C63A00 /* UIImageView+LHGContentRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LHGContentRect.h"; sourceTree = "<group>"; };
+		D87489C924D9641500C63A00 /* UIImageView+LHGContentRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LHGContentRect.m"; sourceTree = "<group>"; };
+		D87489CF24D98B9E00C63A00 /* LHGOpenCVCropCornerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOpenCVCropCornerView.h; sourceTree = "<group>"; };
+		D87489D024D98B9E00C63A00 /* LHGOpenCVCropCornerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHGOpenCVCropCornerView.m; sourceTree = "<group>"; };
+		D882DACD24D809B100593B05 /* LHGOCRResizingImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOCRResizingImageView.h; sourceTree = "<group>"; };
+		D882DACE24D809B100593B05 /* LHGOCRResizingImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHGOCRResizingImageView.m; sourceTree = "<group>"; };
+		D882DAD024D80F5C00593B05 /* LHGOCRResizingImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOCRResizingImageViewController.h; sourceTree = "<group>"; };
+		D882DAD124D80F5C00593B05 /* LHGOCRResizingImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHGOCRResizingImageViewController.m; sourceTree = "<group>"; };
 		D89975B524D2AC6800EA5597 /* OpenCVDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89975B824D2AC6800EA5597 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D89975B924D2AC6800EA5597 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,10 +68,10 @@
 		D89975FF24D2F94A00EA5597 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		D899760224D2F94A00EA5597 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		D899760324D2F94A00EA5597 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		D8D79EAE24D3BE5000444B91 /* OpenCVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVViewController.h; sourceTree = "<group>"; };
-		D8D79EAF24D3BE5000444B91 /* OpenCVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCVViewController.m; sourceTree = "<group>"; };
-		D8E2965024DA6045004696A4 /* WDOpenCVCropMagnifierView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOpenCVCropMagnifierView.h; sourceTree = "<group>"; };
-		D8E2965124DA6045004696A4 /* WDOpenCVCropMagnifierView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDOpenCVCropMagnifierView.m; sourceTree = "<group>"; };
+		D8D79EAE24D3BE5000444B91 /* LHGOpenCVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOpenCVViewController.h; sourceTree = "<group>"; };
+		D8D79EAF24D3BE5000444B91 /* LHGOpenCVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHGOpenCVViewController.m; sourceTree = "<group>"; };
+		D8E2965024DA6045004696A4 /* LHGOpenCVCropMagnifierView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHGOpenCVCropMagnifierView.h; sourceTree = "<group>"; };
+		D8E2965124DA6045004696A4 /* LHGOpenCVCropMagnifierView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHGOpenCVCropMagnifierView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +117,12 @@
 		D87489BB24D943BB00C63A00 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				D87489B724D9332B00C63A00 /* WDOpenCVHelper.h */,
-				D87489B824D9332B00C63A00 /* WDOpenCVHelper.mm */,
-				D87489BD24D9442400C63A00 /* WDOpenCVUtils.h */,
-				D87489BE24D9442400C63A00 /* WDOpenCVUtils.mm */,
-				D87489C824D9641500C63A00 /* UIImageView+SHMContentRect.h */,
-				D87489C924D9641500C63A00 /* UIImageView+SHMContentRect.m */,
+				D87489B724D9332B00C63A00 /* LHGOpenCVHelper.h */,
+				D87489B824D9332B00C63A00 /* LHGOpenCVHelper.mm */,
+				D87489BD24D9442400C63A00 /* LHGOpenCVUtils.h */,
+				D87489BE24D9442400C63A00 /* LHGOpenCVUtils.mm */,
+				D87489C824D9641500C63A00 /* UIImageView+LHGContentRect.h */,
+				D87489C924D9641500C63A00 /* UIImageView+LHGContentRect.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 		D87489BC24D943E100C63A00 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
-				D87489BA24D9409000C63A00 /* WDOpenCVDefines.h */,
+				D87489BA24D9409000C63A00 /* LHGOpenCVDefines.h */,
 			);
 			path = Defines;
 			sourceTree = "<group>";
@@ -138,8 +138,8 @@
 		D87489C024D945C300C63A00 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D87489C124D9460100C63A00 /* WDOpenCVEditingViewController.h */,
-				D87489C224D9460100C63A00 /* WDOpenCVEditingViewController.m */,
+				D87489C124D9460100C63A00 /* LHGOpenCVEditingViewController.h */,
+				D87489C224D9460100C63A00 /* LHGOpenCVEditingViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -147,12 +147,12 @@
 		D87489C424D9528300C63A00 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D87489C524D952D700C63A00 /* WDOpenCVCropFrameView.h */,
-				D87489C624D952D700C63A00 /* WDOpenCVCropFrameView.m */,
-				D87489CF24D98B9E00C63A00 /* WDOpenCVCropCornerView.h */,
-				D87489D024D98B9E00C63A00 /* WDOpenCVCropCornerView.m */,
-				D8E2965024DA6045004696A4 /* WDOpenCVCropMagnifierView.h */,
-				D8E2965124DA6045004696A4 /* WDOpenCVCropMagnifierView.m */,
+				D87489C524D952D700C63A00 /* LHGOpenCVCropFrameView.h */,
+				D87489C624D952D700C63A00 /* LHGOpenCVCropFrameView.m */,
+				D87489CF24D98B9E00C63A00 /* LHGOpenCVCropCornerView.h */,
+				D87489D024D98B9E00C63A00 /* LHGOpenCVCropCornerView.m */,
+				D8E2965024DA6045004696A4 /* LHGOpenCVCropMagnifierView.h */,
+				D8E2965124DA6045004696A4 /* LHGOpenCVCropMagnifierView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,12 +184,12 @@
 				D89975BC24D2AC6800EA5597 /* SceneDelegate.m */,
 				D89975BE24D2AC6800EA5597 /* ViewController.h */,
 				D89975BF24D2AC6800EA5597 /* ViewController.m */,
-				D8D79EAE24D3BE5000444B91 /* OpenCVViewController.h */,
-				D8D79EAF24D3BE5000444B91 /* OpenCVViewController.m */,
-				D882DAD024D80F5C00593B05 /* WDOCRResizingImageViewController.h */,
-				D882DAD124D80F5C00593B05 /* WDOCRResizingImageViewController.m */,
-				D882DACD24D809B100593B05 /* WDOCRResizingImageView.h */,
-				D882DACE24D809B100593B05 /* WDOCRResizingImageView.m */,
+				D8D79EAE24D3BE5000444B91 /* LHGOpenCVViewController.h */,
+				D8D79EAF24D3BE5000444B91 /* LHGOpenCVViewController.m */,
+				D882DAD024D80F5C00593B05 /* LHGOCRResizingImageViewController.h */,
+				D882DAD124D80F5C00593B05 /* LHGOCRResizingImageViewController.m */,
+				D882DACD24D809B100593B05 /* LHGOCRResizingImageView.h */,
+				D882DACE24D809B100593B05 /* LHGOCRResizingImageView.m */,
 				D87489B624D932AC00C63A00 /* OpenCV */,
 				D89975F924D2F94A00EA5597 /* test_img */,
 				D89975C124D2AC6800EA5597 /* Main.storyboard */,
@@ -313,19 +313,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D89975C024D2AC6800EA5597 /* ViewController.m in Sources */,
-				D87489B924D9332B00C63A00 /* WDOpenCVHelper.mm in Sources */,
+				D87489B924D9332B00C63A00 /* LHGOpenCVHelper.mm in Sources */,
 				D89975BA24D2AC6800EA5597 /* AppDelegate.m in Sources */,
-				D8E2965224DA6045004696A4 /* WDOpenCVCropMagnifierView.m in Sources */,
+				D8E2965224DA6045004696A4 /* LHGOpenCVCropMagnifierView.m in Sources */,
 				D89975CB24D2AC6A00EA5597 /* main.m in Sources */,
-				D87489C724D952D700C63A00 /* WDOpenCVCropFrameView.m in Sources */,
-				D87489BF24D9442400C63A00 /* WDOpenCVUtils.mm in Sources */,
-				D882DACF24D809B100593B05 /* WDOCRResizingImageView.m in Sources */,
-				D87489C324D9460100C63A00 /* WDOpenCVEditingViewController.m in Sources */,
-				D8D79EB024D3BE5000444B91 /* OpenCVViewController.m in Sources */,
+				D87489C724D952D700C63A00 /* LHGOpenCVCropFrameView.m in Sources */,
+				D87489BF24D9442400C63A00 /* LHGOpenCVUtils.mm in Sources */,
+				D882DACF24D809B100593B05 /* LHGOCRResizingImageView.m in Sources */,
+				D87489C324D9460100C63A00 /* LHGOpenCVEditingViewController.m in Sources */,
+				D8D79EB024D3BE5000444B91 /* LHGOpenCVViewController.m in Sources */,
 				D89975BD24D2AC6800EA5597 /* SceneDelegate.m in Sources */,
-				D87489D124D98B9E00C63A00 /* WDOpenCVCropCornerView.m in Sources */,
-				D882DAD224D80F5C00593B05 /* WDOCRResizingImageViewController.m in Sources */,
-				D87489CA24D9641500C63A00 /* UIImageView+SHMContentRect.m in Sources */,
+				D87489D124D98B9E00C63A00 /* LHGOpenCVCropCornerView.m in Sources */,
+				D882DAD224D80F5C00593B05 /* LHGOCRResizingImageViewController.m in Sources */,
+				D87489CA24D9641500C63A00 /* UIImageView+LHGContentRect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

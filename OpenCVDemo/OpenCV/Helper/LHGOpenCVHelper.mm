@@ -1,13 +1,13 @@
 //
-//  WDOpenCVHelper.m
+//  LHGOpenCVHelper.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
 //  Copyright © 2020 lihuaguang. All rights reserved.
 //
 
-#import "WDOpenCVHelper.h"
-#import "WDOpenCVDefines.h"
+#import "LHGOpenCVHelper.h"
+#import "LHGOpenCVDefines.h"
 
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -15,7 +15,7 @@
 #include <opencv2/imgcodecs/ios.h>
 #include <vector>
 
-@implementation WDOpenCVHelper
+@implementation LHGOpenCVHelper
 
 + (UIImage *)UIImageFromCVMat:(cv::Mat)cvMat {
     NSData *data = [NSData dataWithBytes:cvMat.data length:cvMat.elemSize() * cvMat.total()];
@@ -120,7 +120,7 @@
 }
 
 + (cv::Mat)cvMatGrayFromUIImage:(UIImage *)image {
-    cv::Mat cvMat = [WDOpenCVHelper cvMatFromUIImage:image];
+    cv::Mat cvMat = [LHGOpenCVHelper cvMatFromUIImage:image];
     cv::Mat grayMat;
     if ( cvMat.channels() == 1 ) {
         grayMat = cvMat;
@@ -133,7 +133,7 @@
 }
 
 + (cv::Mat)cvMatGrayFromAdjustedUIImage:(UIImage *)image {
-    cv::Mat cvMat = [WDOpenCVHelper cvMatFromAdjustedUIImage:image];
+    cv::Mat cvMat = [LHGOpenCVHelper cvMatFromAdjustedUIImage:image];
     cv::Mat grayMat;
     if ( cvMat.channels() == 1 ) {
         grayMat = cvMat;
@@ -156,7 +156,7 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        cv::Mat original = [WDOpenCVHelper cvMatFromUIImage:image];
+        cv::Mat original = [LHGOpenCVHelper cvMatFromUIImage:image];
         cv::resize(original, original, cvSize(targetSize.width, targetSize.height));
         
         std::vector<std::vector<cv::Point>>squares;
@@ -190,14 +190,14 @@
                 
                 if ([[dict objectForKey:@"value"] intValue] == min)
                 {
-                    [sortedPoints setObject:[dict objectForKey:@"point"] forKey:@(WDOpenCVCornerTypeTopLeft)];
+                    [sortedPoints setObject:[dict objectForKey:@"point"] forKey:@(LHGOpenCVCornerTypeTopLeft)];
                     minIndex = i;
                     continue;
                 }
                 
                 if ([[dict objectForKey:@"value"] intValue] == max)
                 {
-                    [sortedPoints setObject:[dict objectForKey:@"point"] forKey:@(WDOpenCVCornerTypeBottomRight)];
+                    [sortedPoints setObject:[dict objectForKey:@"point"] forKey:@(LHGOpenCVCornerTypeBottomRight)];
                     maxIndex = i;
                     continue;
                 }
@@ -216,14 +216,14 @@
             if (largest_square[missingIndexOne].x < largest_square[missingIndexTwo].x)
             {
                 //2nd Point Found
-                [sortedPoints setObject:[[points objectAtIndex:missingIndexOne] objectForKey:@"point"] forKey:@(WDOpenCVCornerTypeBottomLeft)];
-                [sortedPoints setObject:[[points objectAtIndex:missingIndexTwo] objectForKey:@"point"] forKey:@(WDOpenCVCornerTypeTopRight)];
+                [sortedPoints setObject:[[points objectAtIndex:missingIndexOne] objectForKey:@"point"] forKey:@(LHGOpenCVCornerTypeBottomLeft)];
+                [sortedPoints setObject:[[points objectAtIndex:missingIndexTwo] objectForKey:@"point"] forKey:@(LHGOpenCVCornerTypeTopRight)];
             }
             else
             {
                 //4rd Point Found
-                [sortedPoints setObject:[[points objectAtIndex:missingIndexOne] objectForKey:@"point"] forKey:@(WDOpenCVCornerTypeTopRight)];
-                [sortedPoints setObject:[[points objectAtIndex:missingIndexTwo] objectForKey:@"point"] forKey:@(WDOpenCVCornerTypeBottomLeft)];
+                [sortedPoints setObject:[[points objectAtIndex:missingIndexOne] objectForKey:@"point"] forKey:@(LHGOpenCVCornerTypeTopRight)];
+                [sortedPoints setObject:[[points objectAtIndex:missingIndexTwo] objectForKey:@"point"] forKey:@(LHGOpenCVCornerTypeBottomLeft)];
             }
         }
         original.release();
@@ -286,10 +286,10 @@
         dst[3].y = maxHeight - 1;
         
         cv::Mat undistorted = cv::Mat(cvSize(maxWidth,maxHeight), CV_8UC4);
-        cv::Mat original = [WDOpenCVHelper cvMatFromUIImage:image];
+        cv::Mat original = [LHGOpenCVHelper cvMatFromUIImage:image];
         cv::warpPerspective(original, undistorted, cv::getPerspectiveTransform(src, dst), cvSize(maxWidth, maxHeight));
         
-        UIImage *ret = [WDOpenCVHelper UIImageFromCVMat:undistorted];
+        UIImage *ret = [LHGOpenCVHelper UIImageFromCVMat:undistorted];
         if (!ret) {
             ret = image;
         }

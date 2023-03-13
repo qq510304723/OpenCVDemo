@@ -1,5 +1,5 @@
 //
-//  WDOCRResizingImageViewController.h
+//  LHGOCRResizingImageViewController.h
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/3.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WDOCRResizingImageViewController : UIViewController
+@interface LHGOCRResizingImageViewController : UIViewController
 
 - (instancetype)initWithImage:(nullable UIImage *)image;
 

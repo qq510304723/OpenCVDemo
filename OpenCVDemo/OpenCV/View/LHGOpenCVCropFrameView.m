@@ -1,29 +1,29 @@
 //
-//  WDOpenCVCropFrameView.m
+//  LHGOpenCVCropFrameView.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
 //  Copyright © 2020 lihuaguang. All rights reserved.
 //
 
-#import "WDOpenCVCropFrameView.h"
-#import "WDOpenCVCropCornerView.h"
+#import "LHGOpenCVCropFrameView.h"
+#import "LHGOpenCVCropCornerView.h"
 
 #define kCropButtonSize 20
 #define kCropButtonMargin 40
 
-@interface WDOpenCVCropFrameView () <UIGestureRecognizerDelegate>
+@interface LHGOpenCVCropFrameView () <UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong, readwrite) WDOpenCVCropCornerView *topLeftView;
-@property (nonatomic, strong, readwrite) WDOpenCVCropCornerView *topRightView;
-@property (nonatomic, strong, readwrite) WDOpenCVCropCornerView *bottomLeftView;
-@property (nonatomic, strong, readwrite) WDOpenCVCropCornerView *bottomRightView;
-@property (nonatomic, weak) WDOpenCVCropCornerView *activeCornerView;
+@property (nonatomic, strong, readwrite) LHGOpenCVCropCornerView *topLeftView;
+@property (nonatomic, strong, readwrite) LHGOpenCVCropCornerView *topRightView;
+@property (nonatomic, strong, readwrite) LHGOpenCVCropCornerView *bottomLeftView;
+@property (nonatomic, strong, readwrite) LHGOpenCVCropCornerView *bottomRightView;
+@property (nonatomic, weak) LHGOpenCVCropCornerView *activeCornerView;
 @property (nonatomic, copy) NSArray <UIView*> *allCornerViews;
 
 @end
 
-@implementation WDOpenCVCropFrameView
+@implementation LHGOpenCVCropFrameView
 @synthesize lineSuccessColor = _lineSuccessColor;
 @synthesize cornerFillColor = _cornerFillColor;
 
@@ -104,27 +104,27 @@
     CGPoint p1;
     CGPoint p2;
     CGPoint p3;
-    for (WDOpenCVCropCornerView *cornerView in self.allCornerViews) {
+    for (LHGOpenCVCropCornerView *cornerView in self.allCornerViews) {
         switch (cornerView.cornerType) {
-            case WDOpenCVCornerTypeTopLeft:{
+            case LHGOpenCVCornerTypeTopLeft:{
                 p1 = self.topLeftView.point;
                 p2 = self.topRightView.point;
                 p3 = self.bottomLeftView.point;
                 break;
             }
-            case WDOpenCVCornerTypeTopRight:{
+            case LHGOpenCVCornerTypeTopRight:{
                 p1 = self.topRightView.point;
                 p2 = self.bottomRightView.point;
                 p3 = self.topLeftView.point;
                 break;
             }
-            case WDOpenCVCornerTypeBottomRight:{
+            case LHGOpenCVCornerTypeBottomRight:{
                 p1 = self.bottomRightView.point;
                 p2 = self.bottomLeftView.point;
                 p3 = self.topRightView.point;
                 break;
             }
-            case WDOpenCVCornerTypeBottomLeft:{
+            case LHGOpenCVCornerTypeBottomLeft:{
                 p1 = self.bottomLeftView.point;
                 p2 = self.topLeftView.point;
                 p3 = self.bottomRightView.point;
@@ -182,7 +182,7 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     CGPoint location = [touch locationInView:self];
-    for (WDOpenCVCropCornerView *cornerView in self.allCornerViews) {
+    for (LHGOpenCVCropCornerView *cornerView in self.allCornerViews) {
         CGPoint covertPoint = [self convertPoint:location toView:cornerView];
         if (CGRectContainsPoint(cornerView.bounds, covertPoint)) {
             self.activeCornerView = cornerView;
@@ -196,24 +196,24 @@
 
 #pragma mark - Public
 
-- (void)updatePointValue:(CGPoint)point cornerType:(WDOpenCVCornerType)cornerType {
+- (void)updatePointValue:(CGPoint)point cornerType:(LHGOpenCVCornerType)cornerType {
     switch (cornerType) {
-        case WDOpenCVCornerTypeTopLeft: {
+        case LHGOpenCVCornerTypeTopLeft: {
             self.topLeftView.point = point;
             [self setNeedsDisplay];
             break;
         }
-        case WDOpenCVCornerTypeTopRight: {
+        case LHGOpenCVCornerTypeTopRight: {
             self.topRightView.point = point;
             [self setNeedsDisplay];
             break;
         }
-        case WDOpenCVCornerTypeBottomLeft: {
+        case LHGOpenCVCornerTypeBottomLeft: {
             self.bottomLeftView.point = point;
             [self setNeedsDisplay];
             break;
         }
-        case WDOpenCVCornerTypeBottomRight: {
+        case LHGOpenCVCornerTypeBottomRight: {
             self.bottomRightView.point = point;
             [self setNeedsDisplay];
             break;
@@ -224,18 +224,18 @@
     }
 }
 
-- (CGPoint)pointValueWithCornerType:(WDOpenCVCornerType)cornerType {
+- (CGPoint)pointValueWithCornerType:(LHGOpenCVCornerType)cornerType {
     switch (cornerType) {
-        case WDOpenCVCornerTypeTopLeft: {
+        case LHGOpenCVCornerTypeTopLeft: {
             return self.topLeftView.point;
         }
-        case WDOpenCVCornerTypeTopRight: {
+        case LHGOpenCVCornerTypeTopRight: {
             return self.topRightView.point;
         }
-        case WDOpenCVCornerTypeBottomLeft: {
+        case LHGOpenCVCornerTypeBottomLeft: {
             return self.bottomLeftView.point;
         }
-        case WDOpenCVCornerTypeBottomRight: {
+        case LHGOpenCVCornerTypeBottomRight: {
             return self.bottomRightView.point;
         }
         default: {
@@ -266,40 +266,40 @@
 
 #pragma mark - Getters
 
-- (WDOpenCVCropCornerView *)topLeftView {
+- (LHGOpenCVCropCornerView *)topLeftView {
     if (!_topLeftView) {
         _topLeftView = [self cornerView];
-        _topLeftView.cornerType = WDOpenCVCornerTypeTopLeft;
+        _topLeftView.cornerType = LHGOpenCVCornerTypeTopLeft;
     }
     return _topLeftView;
 }
 
-- (WDOpenCVCropCornerView *)topRightView {
+- (LHGOpenCVCropCornerView *)topRightView {
     if (!_topRightView) {
         _topRightView = [self cornerView];
-        _topRightView.cornerType = WDOpenCVCornerTypeTopRight;
+        _topRightView.cornerType = LHGOpenCVCornerTypeTopRight;
     }
     return _topRightView;
 }
 
-- (WDOpenCVCropCornerView *)bottomLeftView {
+- (LHGOpenCVCropCornerView *)bottomLeftView {
     if (!_bottomLeftView) {
         _bottomLeftView = [self cornerView];
-        _bottomLeftView.cornerType = WDOpenCVCornerTypeBottomLeft;
+        _bottomLeftView.cornerType = LHGOpenCVCornerTypeBottomLeft;
     }
     return _bottomLeftView;
 }
 
-- (WDOpenCVCropCornerView *)bottomRightView {
+- (LHGOpenCVCropCornerView *)bottomRightView {
     if (!_bottomRightView) {
         _bottomRightView = [self cornerView];
-        _bottomRightView.cornerType = WDOpenCVCornerTypeBottomRight;
+        _bottomRightView.cornerType = LHGOpenCVCornerTypeBottomRight;
     }
     return _bottomRightView;
 }
 
-- (WDOpenCVCropCornerView *)cornerView {
-    WDOpenCVCropCornerView *cornerView = [[WDOpenCVCropCornerView alloc] init];
+- (LHGOpenCVCropCornerView *)cornerView {
+    LHGOpenCVCropCornerView *cornerView = [[LHGOpenCVCropCornerView alloc] init];
     cornerView.frame = CGRectMake(0, 0, kCropButtonSize, kCropButtonSize);
 //    cornerView.alpha = 0.5;
     cornerView.layer.backgroundColor = self.cornerFillColor.CGColor;

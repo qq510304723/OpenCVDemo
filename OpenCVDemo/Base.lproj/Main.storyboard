@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OLs-cf-xc9">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OLs-cf-xc9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,28 +12,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="buz-Hj-hPt">
-                                <rect key="frame" x="20" y="712" width="374" height="50"/>
+                                <rect key="frame" x="20" y="450" width="560" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7i-6i-AL9">
-                                        <rect key="frame" x="0.0" y="0.0" width="129.5" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7i-6i-AL9">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="50"/>
                                         <state key="normal" title="识别裁剪"/>
                                         <connections>
                                             <segue destination="fDN-Xc-plh" kind="show" identifier="defaultImageResizing" id="k2F-7h-5ML"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU7-Lr-ced">
-                                        <rect key="frame" x="149.5" y="0.0" width="96" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU7-Lr-ced">
+                                        <rect key="frame" x="214" y="0.0" width="144" height="50"/>
                                         <state key="normal" title="选照片"/>
                                         <connections>
                                             <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DRQ-cY-vIq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSc-dC-CQx">
-                                        <rect key="frame" x="265.5" y="0.0" width="108.5" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSc-dC-CQx">
+                                        <rect key="frame" x="378" y="0.0" width="182" height="50"/>
                                         <state key="normal" title="crop"/>
                                         <connections>
                                             <segue destination="c8F-B9-tBR" kind="presentation" identifier="toCrop" id="M0C-Xn-oj7"/>
@@ -45,17 +45,17 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Ow-I7-vUZ">
-                                <rect key="frame" x="20" y="642" width="374" height="50"/>
+                                <rect key="frame" x="20" y="380" width="560" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egU-MY-S7n">
-                                        <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egU-MY-S7n">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
                                         <state key="normal" title="OpenCV"/>
                                         <connections>
                                             <segue destination="Jeg-1B-RHs" kind="show" id="PlZ-J0-VAA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG0-sJ-2Ei">
-                                        <rect key="frame" x="197" y="0.0" width="177" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG0-sJ-2Ei">
+                                        <rect key="frame" x="290" y="0.0" width="270" height="50"/>
                                         <state key="normal" title="拍照识别"/>
                                     </button>
                                 </subviews>
@@ -64,15 +64,16 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="500" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nzc-hn-tfm">
-                                <rect key="frame" x="57" y="100" width="300" height="300"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="150" y="56" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="OV0-ji-law"/>
                                     <constraint firstAttribute="height" constant="300" id="WDT-zI-j73"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="buz-Hj-hPt" firstAttribute="top" secondItem="3Ow-I7-vUZ" secondAttribute="bottom" constant="20" id="9TF-kH-q6v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Ow-I7-vUZ" secondAttribute="trailing" constant="20" id="DJv-dm-ZC4"/>
@@ -83,7 +84,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="buz-Hj-hPt" secondAttribute="trailing" constant="20" id="qDa-sq-YOf"/>
                             <constraint firstItem="Nzc-hn-tfm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="qMY-Iq-fDc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Oea-Ts-1RU"/>
                 </viewController>
@@ -94,12 +94,12 @@
         <!--Resizing Image View Controller-->
         <scene sceneID="Emz-Sk-YCB">
             <objects>
-                <viewController id="fDN-Xc-plh" customClass="WDOCRResizingImageViewController" sceneMemberID="viewController">
+                <viewController id="fDN-Xc-plh" customClass="LHGOCRResizingImageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zib-nd-2RD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="L7t-WN-KBd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yw8-uB-sbq"/>
                 </viewController>
@@ -110,12 +110,12 @@
         <!--OpenCV Editing View Controller-->
         <scene sceneID="eZR-5c-f1e">
             <objects>
-                <viewController id="czU-ZB-HVy" customClass="WDOpenCVEditingViewController" sceneMemberID="viewController">
+                <viewController id="czU-ZB-HVy" customClass="LHGOpenCVEditingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AgP-11-ddv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TU4-r5-Pff"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="vdW-eU-jjk"/>
                 </viewController>
@@ -126,49 +126,49 @@
         <!--OpenCV View Controller-->
         <scene sceneID="c8C-Y9-kUf">
             <objects>
-                <viewController id="Jeg-1B-RHs" customClass="OpenCVViewController" sceneMemberID="viewController">
+                <viewController id="Jeg-1B-RHs" customClass="LHGOpenCVViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3YE-zQ-ert">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25y-l5-JIi">
                                 <rect key="frame" x="0.0" y="322" width="414" height="366"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dql-DJ-yfb">
-                                <rect key="frame" x="20" y="88" width="374" height="44"/>
+                                <rect key="frame" x="20" y="44" width="560" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bP6-wm-BYz">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="44"/>
+                                    <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bP6-wm-BYz">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="44"/>
                                         <state key="normal" title="恢复原图"/>
                                         <connections>
                                             <action selector="buttonClicked:" destination="Jeg-1B-RHs" eventType="touchUpInside" id="4WU-vd-OOO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-LB-Ors">
-                                        <rect key="frame" x="77" y="0.0" width="66.5" height="44"/>
+                                    <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-LB-Ors">
+                                        <rect key="frame" x="114" y="0.0" width="104" height="44"/>
                                         <state key="normal" title="二值化"/>
                                         <connections>
                                             <action selector="buttonClicked:" destination="Jeg-1B-RHs" eventType="touchUpInside" id="4WR-yy-xP7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-yA-R99">
-                                        <rect key="frame" x="153.5" y="0.0" width="67" height="44"/>
+                                    <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-yA-R99">
+                                        <rect key="frame" x="228" y="0.0" width="104" height="44"/>
                                         <state key="normal" title="高斯滤波"/>
                                         <connections>
                                             <action selector="buttonClicked:" destination="Jeg-1B-RHs" eventType="touchUpInside" id="E9V-fP-g24"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYK-IA-V3b">
-                                        <rect key="frame" x="230.5" y="0.0" width="66.5" height="44"/>
+                                    <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYK-IA-V3b">
+                                        <rect key="frame" x="342" y="0.0" width="104" height="44"/>
                                         <state key="normal" title="膨胀"/>
                                         <connections>
                                             <action selector="buttonClicked:" destination="Jeg-1B-RHs" eventType="touchUpInside" id="GZH-jX-pVi"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="205" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-2E-xk3">
-                                        <rect key="frame" x="307" y="0.0" width="67" height="44"/>
+                                    <button opaque="NO" tag="205" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-2E-xk3">
+                                        <rect key="frame" x="456" y="0.0" width="104" height="44"/>
                                         <state key="normal" title="边缘提取"/>
                                         <connections>
                                             <action selector="buttonClicked:" destination="Jeg-1B-RHs" eventType="touchUpInside" id="N0V-I3-PZ8"/>
@@ -180,24 +180,24 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6HL-5a-qbN">
-                                <rect key="frame" x="20" y="140" width="374" height="44"/>
+                                <rect key="frame" x="20" y="96" width="560" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" tag="301" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-H1-BBQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="44"/>
+                                    <button opaque="NO" tag="301" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-H1-BBQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
                                         <state key="normal" title="轮廓查找"/>
                                         <connections>
                                             <action selector="buttonClicked:" destination="Jeg-1B-RHs" eventType="touchUpInside" id="SiY-Iq-R9n"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="302" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-pF-fYG">
-                                        <rect key="frame" x="128" y="0.0" width="118" height="44"/>
+                                    <button opaque="NO" tag="302" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-pF-fYG">
+                                        <rect key="frame" x="190" y="0.0" width="180" height="44"/>
                                         <state key="normal" title="顶点查找"/>
                                         <connections>
                                             <action selector="buttonClicked:" destination="Jeg-1B-RHs" eventType="touchUpInside" id="YGj-X9-qwO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="303" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l93-xQ-aEz">
-                                        <rect key="frame" x="256" y="0.0" width="118" height="44"/>
+                                    <button opaque="NO" tag="303" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l93-xQ-aEz">
+                                        <rect key="frame" x="380" y="0.0" width="180" height="44"/>
                                         <state key="normal" title="纠偏"/>
                                         <connections>
                                             <action selector="buttonClicked:" destination="Jeg-1B-RHs" eventType="touchUpInside" id="wMW-g1-XlN"/>
@@ -210,7 +210,8 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2il-cL-MzK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Dql-DJ-yfb" firstAttribute="trailing" secondItem="2il-cL-MzK" secondAttribute="trailing" constant="-20" id="FDE-Pa-KXc"/>
                             <constraint firstItem="6HL-5a-qbN" firstAttribute="leading" secondItem="2il-cL-MzK" secondAttribute="leading" constant="20" id="UwP-I2-TNk"/>
@@ -219,7 +220,6 @@
                             <constraint firstItem="Dql-DJ-yfb" firstAttribute="leading" secondItem="2il-cL-MzK" secondAttribute="leading" constant="20" id="qje-Vr-X4c"/>
                             <constraint firstItem="Dql-DJ-yfb" firstAttribute="top" secondItem="2il-cL-MzK" secondAttribute="top" id="twz-b1-flG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2il-cL-MzK"/>
                     </view>
                     <navigationItem key="navigationItem" id="OIO-Cx-Xuh"/>
                     <connections>
@@ -267,4 +267,15 @@
             <point key="canvasLocation" x="2447.826086956522" y="810.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

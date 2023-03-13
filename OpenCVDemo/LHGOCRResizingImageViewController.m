@@ -1,23 +1,23 @@
 //
-//  WDOCRResizingImageViewController.m
+//  LHGOCRResizingImageViewController.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/3.
 //  Copyright © 2020 lihuaguang. All rights reserved.
 //
 
-#import "WDOCRResizingImageViewController.h"
-#import "WDOCRResizingImageView.h"
+#import "LHGOCRResizingImageViewController.h"
+#import "LHGOCRResizingImageView.h"
 #import "Masonry.h"
 
-@interface WDOCRResizingImageViewController ()
+@interface LHGOCRResizingImageViewController ()
 
-@property (nonatomic, strong) WDOCRResizingImageView *imageView;
+@property (nonatomic, strong) LHGOCRResizingImageView *imageView;
 @property (nonatomic, assign) BOOL needLayout;
 
 @end
 
-@implementation WDOCRResizingImageViewController
+@implementation LHGOCRResizingImageViewController
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
@@ -84,9 +84,9 @@
 
 #pragma mark - Getters
 
-- (WDOCRResizingImageView *)imageView {
+- (LHGOCRResizingImageView *)imageView {
     if (!_imageView) {
-        _imageView = [[WDOCRResizingImageView alloc] init];
+        _imageView = [[LHGOCRResizingImageView alloc] init];
     }
     return _imageView;
 }

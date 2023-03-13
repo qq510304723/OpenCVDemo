@@ -1,5 +1,5 @@
 //
-//  WDOpenCVCropMagnifierView.h
+//  LHGOpenCVCropMagnifierView.h
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/5.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WDOpenCVCropMagnifierView : UIView
+@interface LHGOpenCVCropMagnifierView : UIView
 
 - (void)updateRenderPoint:(CGPoint)renderPoint renderView:(UIView *)renderView;
 

@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "WDOCRResizingImageViewController.h"
-#import "WDOpenCVEditingViewController.h"
+#import "LHGOCRResizingImageViewController.h"
+#import "LHGOpenCVEditingViewController.h"
 
-@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, WDOpenCVEditingViewControllerDelegate>
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, LHGOpenCVEditingViewControllerDelegate>
 
 @end
 
@@ -33,12 +33,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"defaultImageResizing"]) {
-        if (![segue.destinationViewController isKindOfClass:[WDOCRResizingImageViewController class]]) {
+        if (![segue.destinationViewController isKindOfClass:[LHGOCRResizingImageViewController class]]) {
             return;
         }
         
         UIImage *image = [UIImage imageNamed:@"5.png"];
-        WDOCRResizingImageViewController *destVC = (WDOCRResizingImageViewController *)segue.destinationViewController;
+        LHGOCRResizingImageViewController *destVC = (LHGOCRResizingImageViewController *)segue.destinationViewController;
         destVC.image = image;
     }
     
@@ -49,7 +49,7 @@
         
         UIImage *image = [UIImage imageNamed:@"4.png"];
         UINavigationController *destVC = (UINavigationController *)segue.destinationViewController;
-        WDOpenCVEditingViewController *editor = (WDOpenCVEditingViewController *)destVC.topViewController;
+        LHGOpenCVEditingViewController *editor = (LHGOpenCVEditingViewController *)destVC.topViewController;
         editor.delegate = self;
         editor.originImage = image;
     }
@@ -61,7 +61,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [picker dismissViewControllerAnimated:YES completion:^{
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage] ; //通过key值获取到图片
-        WDOpenCVEditingViewController *editor = [[WDOpenCVEditingViewController alloc] init];
+        LHGOpenCVEditingViewController *editor = [[LHGOpenCVEditingViewController alloc] init];
         editor.delegate = self;
         editor.originImage = image;
         editor.autoDectorCorner = YES;
@@ -75,9 +75,9 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - WDOpenCVEditingViewControllerDelegate
+#pragma mark - LHGOpenCVEditingViewControllerDelegate
 
-- (void)editingController:(WDOpenCVEditingViewController *)editor didFinishCropping:(UIImage *)finalCropImage {
+- (void)editingController:(LHGOpenCVEditingViewController *)editor didFinishCropping:(UIImage *)finalCropImage {
     UIImageView *imageView = (UIImageView *)[self.view viewWithTag:500];
     imageView.image = finalCropImage;
 }

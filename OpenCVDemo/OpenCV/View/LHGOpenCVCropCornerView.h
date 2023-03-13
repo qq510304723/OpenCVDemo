@@ -1,5 +1,5 @@
 //
-//  WDOpenCVCropCornerView.h
+//  LHGOpenCVCropCornerView.h
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WDOpenCVDefines.h"
+#import "LHGOpenCVDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WDOpenCVCropCornerView : UIView
+@interface LHGOpenCVCropCornerView : UIView
 
-@property (nonatomic, assign) WDOpenCVCornerType cornerType;
+@property (nonatomic, assign) LHGOpenCVCornerType cornerType;
 
 @property (nonatomic, assign) CGPoint point;
 

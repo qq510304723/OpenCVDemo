@@ -1,14 +1,14 @@
 //
-//  UIImageView+SHMContentRect.m
+//  UIImageView+LHGContentRect.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
 //  Copyright © 2020 lihuaguang. All rights reserved.
 //
 
-#import "UIImageView+SHMContentRect.h"
+#import "UIImageView+LHGContentRect.h"
 
-@implementation UIImageView (SHMContentRect)
+@implementation UIImageView (LHGContentRect)
 
 - (CGRect)shm_contentFrame {
     CGSize limitSize = self.bounds.size;

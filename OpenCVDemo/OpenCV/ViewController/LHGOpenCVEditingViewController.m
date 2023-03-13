@@ -1,30 +1,30 @@
 //
-//  WDOpenCVEditingViewController.m
+//  LHGOpenCVEditingViewController.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
 //  Copyright © 2020 lihuaguang. All rights reserved.
 //
 
-#import "WDOpenCVEditingViewController.h"
-#import "UIImageView+SHMContentRect.h"
-#import "WDOpenCVCropFrameView.h"
-#import "WDOpenCVCropMagnifierView.h"
-#import "WDOpenCVUtils.h"
-#import "WDOpenCVHelper.h"
+#import "LHGOpenCVEditingViewController.h"
+#import "UIImageView+LHGContentRect.h"
+#import "LHGOpenCVCropFrameView.h"
+#import "LHGOpenCVCropMagnifierView.h"
+#import "LHGOpenCVUtils.h"
+#import "LHGOpenCVHelper.h"
 #import "Masonry.h"
 
-static CGFloat kWDOpenCVEditingImageMargin = 20.0;
+static CGFloat kLHGOpenCVEditingImageMargin = 20.0;
 
-@interface WDOpenCVEditingViewController () <WDOpenCVCropFrameViewDelegate>
+@interface LHGOpenCVEditingViewController () <LHGOpenCVCropFrameViewDelegate>
 
 @property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) WDOpenCVCropFrameView *cropFrameView;
-@property (strong, nonatomic) WDOpenCVCropMagnifierView *magnifierView;
+@property (nonatomic, strong) LHGOpenCVCropFrameView *cropFrameView;
+@property (strong, nonatomic) LHGOpenCVCropMagnifierView *magnifierView;
 
 @end
 
-@implementation WDOpenCVEditingViewController
+@implementation LHGOpenCVEditingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,10 +37,10 @@ static CGFloat kWDOpenCVEditingImageMargin = 20.0;
     
     CGFloat navHeight = [UIApplication sharedApplication].statusBarFrame.size.height + 44;
     CGRect imageFrame = CGRectZero;
-    imageFrame.origin.x = kWDOpenCVEditingImageMargin;
-    imageFrame.origin.y = kWDOpenCVEditingImageMargin + navHeight;
-    imageFrame.size.width = CGRectGetWidth(self.view.frame) - kWDOpenCVEditingImageMargin * 2;
-    imageFrame.size.height = CGRectGetHeight(self.view.frame) - imageFrame.origin.y - kWDOpenCVEditingImageMargin;
+    imageFrame.origin.x = kLHGOpenCVEditingImageMargin;
+    imageFrame.origin.y = kLHGOpenCVEditingImageMargin + navHeight;
+    imageFrame.size.width = CGRectGetWidth(self.view.frame) - kLHGOpenCVEditingImageMargin * 2;
+    imageFrame.size.height = CGRectGetHeight(self.view.frame) - imageFrame.origin.y - kLHGOpenCVEditingImageMargin;
     
     self.imageView = [[UIImageView alloc] initWithFrame:imageFrame];
     self.imageView.image = self.originImage;
@@ -50,16 +50,16 @@ static CGFloat kWDOpenCVEditingImageMargin = 20.0;
     CGRect cropFrame = [self.imageView shm_contentFrame];
     cropFrame.origin.x += imageFrame.origin.x;
     cropFrame.origin.y += imageFrame.origin.y;
-    self.cropFrameView = [[WDOpenCVCropFrameView alloc] initWithFrame:cropFrame];
+    self.cropFrameView = [[LHGOpenCVCropFrameView alloc] initWithFrame:cropFrame];
     self.cropFrameView.delegate = self;
     [self.view addSubview:self.cropFrameView];
     
-    self.magnifierView = [[WDOpenCVCropMagnifierView alloc] init];
+    self.magnifierView = [[LHGOpenCVCropMagnifierView alloc] init];
     [self.view addSubview:self.magnifierView];
     self.magnifierView.hidden = YES;
     
     if (self.autoDectorCorner) {
-        [WDOpenCVHelper asyncDetectQuadCornersWithImage:self.originImage targetSize:cropFrame.size completionHandler:^(NSDictionary<NSNumber *,NSValue *> * _Nullable quadPoints) {
+        [LHGOpenCVHelper asyncDetectQuadCornersWithImage:self.originImage targetSize:cropFrame.size completionHandler:^(NSDictionary<NSNumber *,NSValue *> * _Nullable quadPoints) {
             if (quadPoints.count == 4) {
                 [quadPoints enumerateKeysAndObjectsUsingBlock:^(NSNumber * _Nonnull key, NSValue * _Nonnull obj, BOOL * _Nonnull stop) {
                     [self.cropFrameView updatePointValue:obj.CGPointValue cornerType:key.integerValue];
@@ -84,10 +84,10 @@ static CGFloat kWDOpenCVEditingImageMargin = 20.0;
     }
     
     CGFloat scale = [self.imageView shm_contentScale];
-    CGPoint topLeftPoint = [self.cropFrameView pointValueWithCornerType:WDOpenCVCornerTypeTopLeft];
-    CGPoint topRightPoint = [self.cropFrameView pointValueWithCornerType:WDOpenCVCornerTypeTopRight];
-    CGPoint bottomLeftPoint = [self.cropFrameView pointValueWithCornerType:WDOpenCVCornerTypeBottomLeft];
-    CGPoint bottomRightPoint = [self.cropFrameView pointValueWithCornerType:WDOpenCVCornerTypeBottomRight];
+    CGPoint topLeftPoint = [self.cropFrameView pointValueWithCornerType:LHGOpenCVCornerTypeTopLeft];
+    CGPoint topRightPoint = [self.cropFrameView pointValueWithCornerType:LHGOpenCVCornerTypeTopRight];
+    CGPoint bottomLeftPoint = [self.cropFrameView pointValueWithCornerType:LHGOpenCVCornerTypeBottomLeft];
+    CGPoint bottomRightPoint = [self.cropFrameView pointValueWithCornerType:LHGOpenCVCornerTypeBottomRight];
     
     topLeftPoint.x /= scale;
     topLeftPoint.y /= scale;
@@ -105,11 +105,11 @@ static CGFloat kWDOpenCVEditingImageMargin = 20.0;
     [vertexes addObject:[NSValue valueWithCGPoint:topRightPoint]];
     [vertexes addObject:[NSValue valueWithCGPoint:bottomRightPoint]];
     [vertexes addObject:[NSValue valueWithCGPoint:bottomLeftPoint]];
-    UIImage *cropImage1 = [WDOpenCVUtils getCorrectQuadImageWithImage:self.originImage vertexes:vertexes];
+    UIImage *cropImage1 = [LHGOpenCVUtils getCorrectQuadImageWithImage:self.originImage vertexes:vertexes];
      */
     
     // 方案二：效果较好
-    [WDOpenCVHelper asyncCropWithImage:self.originImage topLeftPoint:topLeftPoint topRightPoint:topRightPoint bottomLeftPoint:bottomLeftPoint bottomRightPoint:bottomRightPoint completionHandler:^(UIImage * _Nonnull retImage) {
+    [LHGOpenCVHelper asyncCropWithImage:self.originImage topLeftPoint:topLeftPoint topRightPoint:topRightPoint bottomLeftPoint:bottomLeftPoint bottomRightPoint:bottomRightPoint completionHandler:^(UIImage * _Nonnull retImage) {
         if ([self.delegate respondsToSelector:@selector(editingController:didFinishCropping:)]) {
             [self.delegate editingController:self didFinishCropping:retImage];
         }
@@ -117,9 +117,9 @@ static CGFloat kWDOpenCVEditingImageMargin = 20.0;
     }];
 }
 
-#pragma mark - WDOpenCVCropFrameViewDelegate
+#pragma mark - LHGOpenCVCropFrameViewDelegate
 
-- (void)cropFrameView:(WDOpenCVCropFrameView *)cropFrameView didMoveToPoint:(CGPoint)point state:(UIGestureRecognizerState)state {
+- (void)cropFrameView:(LHGOpenCVCropFrameView *)cropFrameView didMoveToPoint:(CGPoint)point state:(UIGestureRecognizerState)state {
     if (state == UIGestureRecognizerStateBegan) {
         self.magnifierView.hidden = NO;
     } else if (state == UIGestureRecognizerStateEnded || state == UIGestureRecognizerStateCancelled) {

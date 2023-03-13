@@ -1,5 +1,5 @@
 //
-//  OpenCVViewController.h
+//  LHGOpenCVViewController.h
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/7/31.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OpenCVViewController : UIViewController
+@interface LHGOpenCVViewController : UIViewController
 
 @end
 

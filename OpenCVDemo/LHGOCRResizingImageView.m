@@ -1,24 +1,24 @@
 //
-//  WDOCRResizingImageView.m
+//  LHGOCRResizingImageView.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/3.
 //  Copyright © 2020 lihuaguang. All rights reserved.
 //
 
-#import "WDOCRResizingImageView.h"
+#import "LHGOCRResizingImageView.h"
 #import "Masonry.h"
 
-static CGFloat kWDOCRResizingImageMargin = 10.0;
+static CGFloat kLHGOCRResizingImageMargin = 10.0;
 
-@interface WDOCRResizingImageView ()
+@interface LHGOCRResizingImageView ()
 
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
 
 @end
 
-@implementation WDOCRResizingImageView
+@implementation LHGOCRResizingImageView
 
 - (instancetype)init {
     return [self initWithFrame:CGRectZero];
@@ -32,8 +32,8 @@ static CGFloat kWDOCRResizingImageMargin = 10.0;
         
         [self addSubview:self.imageView];
         [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.equalTo(self).offset(kWDOCRResizingImageMargin);
-            make.bottom.right.equalTo(self).offset(-kWDOCRResizingImageMargin);
+            make.top.left.equalTo(self).offset(kLHGOCRResizingImageMargin);
+            make.bottom.right.equalTo(self).offset(-kLHGOCRResizingImageMargin);
         }];
     }
     return self;
@@ -62,8 +62,8 @@ static CGFloat kWDOCRResizingImageMargin = 10.0;
     
     // 计算图片填充区域大小（图片可能太大或或者太小）
     CGSize imageSize = self.originImage.size;
-    CGSize limitSize = CGSizeMake(CGRectGetWidth(self.bounds) - kWDOCRResizingImageMargin * 2,
-                                  CGRectGetHeight(self.bounds) - kWDOCRResizingImageMargin * 2);
+    CGSize limitSize = CGSizeMake(CGRectGetWidth(self.bounds) - kLHGOCRResizingImageMargin * 2,
+                                  CGRectGetHeight(self.bounds) - kLHGOCRResizingImageMargin * 2);
     CGFloat imageScale = fminf(limitSize.width / imageSize.width,
                                limitSize.height / imageSize.height);
     CGSize scaledSize = CGSizeMake(roundf(imageSize.width * imageScale),

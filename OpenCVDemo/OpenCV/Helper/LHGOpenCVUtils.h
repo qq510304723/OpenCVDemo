@@ -1,5 +1,5 @@
 //
-//  WDOpenCVUtils.h
+//  LHGOpenCVUtils.h
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WDOpenCVUtils : NSObject
+@interface LHGOpenCVUtils : NSObject
 
 /**
  二值化

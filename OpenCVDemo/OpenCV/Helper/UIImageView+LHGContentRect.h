@@ -1,5 +1,5 @@
 //
-//  UIImageView+SHMContentRect.h
+//  UIImageView+LHGContentRect.h
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImageView (SHMContentRect)
+@interface UIImageView (LHGContentRect)
 
 - (CGRect)shm_contentFrame;
 

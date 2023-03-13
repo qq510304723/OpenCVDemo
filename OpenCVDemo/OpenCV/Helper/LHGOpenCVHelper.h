@@ -1,5 +1,5 @@
 //
-//  WDOpenCVHelper.h
+//  LHGOpenCVHelper.h
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WDOpenCVHelper : NSObject
+@interface LHGOpenCVHelper : NSObject
 
 /**
  轮廓提取，并查找轮廓四个顶点

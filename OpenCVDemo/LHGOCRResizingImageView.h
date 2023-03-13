@@ -1,5 +1,5 @@
 //
-//  WDOCRResizingImageView.h
+//  LHGOCRResizingImageView.h
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/3.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WDOCRResizingImageView : UIView
+@interface LHGOCRResizingImageView : UIView
 
 @property (nonatomic, strong) UIImage *originImage;
 

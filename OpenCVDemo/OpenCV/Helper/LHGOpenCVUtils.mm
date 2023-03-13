@@ -1,5 +1,5 @@
 //
-//  WDOpenCVUtils.m
+//  LHGOpenCVUtils.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/4.
@@ -19,10 +19,10 @@
 #include <opencv2/imgcodecs/ios.h>
 #include <algorithm>
 
-#import "WDOpenCVUtils.h"
-#import "WDOpenCVDefines.h"
+#import "LHGOpenCVUtils.h"
+#import "LHGOpenCVDefines.h"
 
-@implementation WDOpenCVUtils
+@implementation LHGOpenCVUtils
 
 using namespace std;
 using namespace cv;

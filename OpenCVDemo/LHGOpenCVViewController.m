@@ -1,16 +1,16 @@
 //
-//  OpenCVViewController.m
+//  LHGOpenCVViewController.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/7/31.
 //  Copyright © 2020 lihuaguang. All rights reserved.
 //
 
-#import "OpenCVViewController.h"
-#import "WDOpenCVUtils.h"
+#import "LHGOpenCVViewController.h"
+#import "LHGOpenCVUtils.h"
 #import "Masonry.h"
 
-@interface OpenCVViewController ()
+@interface LHGOpenCVViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) UIImage *originImage;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation OpenCVViewController
+@implementation LHGOpenCVViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,37 +55,37 @@
         }
     }
     else if (btn.tag == 202) {
-        UIImage *image = [WDOpenCVUtils RGB2GrayWithImage:self.imageView.image];
+        UIImage *image = [LHGOpenCVUtils RGB2GrayWithImage:self.imageView.image];
         if (image) {
             self.imageView.image = image;
         }
     }
     else if (btn.tag == 203) {
-        UIImage *image = [WDOpenCVUtils gaussianBlurWithImage:self.imageView.image];
+        UIImage *image = [LHGOpenCVUtils gaussianBlurWithImage:self.imageView.image];
         if (image) {
             self.imageView.image = image;
         }
     }
     else if (btn.tag == 204) {
-        UIImage *image = [WDOpenCVUtils dilateWithImage:self.imageView.image];
+        UIImage *image = [LHGOpenCVUtils dilateWithImage:self.imageView.image];
         if (image) {
             self.imageView.image = image;
         }
     }
     else if (btn.tag == 205) {
-        UIImage *image = [WDOpenCVUtils cannyExtractionWithImage:self.imageView.image];
+        UIImage *image = [LHGOpenCVUtils cannyExtractionWithImage:self.imageView.image];
         if (image) {
             self.imageView.image = image;
         }
     }
     else if (btn.tag == 301) {
-        UIImage *image = [WDOpenCVUtils showContoursWithImage:self.imageView.image];
+        UIImage *image = [LHGOpenCVUtils showContoursWithImage:self.imageView.image];
         if (image) {
             self.imageView.image = image;
         }
     }
     else if (btn.tag == 302) {
-        NSArray *vertexes = [WDOpenCVUtils findContoursVertexWithBlackContourImage:self.imageView.image sourceImage:self.originImage];
+        NSArray *vertexes = [LHGOpenCVUtils findContoursVertexWithBlackContourImage:self.imageView.image sourceImage:self.originImage];
         self.imageView.image = self.originImage;
         NSLog(@"vertexes = %@", vertexes);
         
@@ -104,7 +104,7 @@
         }
     }
     else if (btn.tag == 303) {
-        UIImage *image = [WDOpenCVUtils getCorrectQuadImageWithImage:self.originImage vertexes:self.vertexes];
+        UIImage *image = [LHGOpenCVUtils getCorrectQuadImageWithImage:self.originImage vertexes:self.vertexes];
         if (image) {
             self.imageView.image = image;
         }

@@ -1,23 +1,23 @@
 //
-//  WDOpenCVCropMagnifierView.m
+//  LHGOpenCVCropMagnifierView.m
 //  OpenCVDemo
 //
 //  Created by lihuaguang on 2020/8/5.
 //  Copyright © 2020 lihuaguang. All rights reserved.
 //
 
-#import "WDOpenCVCropMagnifierView.h"
+#import "LHGOpenCVCropMagnifierView.h"
 
 static CGFloat kCropMagnifierSize = 100.0f;
 
-@interface WDOpenCVCropMagnifierView ()
+@interface LHGOpenCVCropMagnifierView ()
 
 @property (nonatomic, assign) CGPoint renderPoint;
 @property (nonatomic, strong) UIView *renderView;
 
 @end
 
-@implementation WDOpenCVCropMagnifierView
+@implementation LHGOpenCVCropMagnifierView
 
 - (instancetype)init {
     return [self initWithFrame:CGRectMake(0, 0, kCropMagnifierSize, kCropMagnifierSize)];
